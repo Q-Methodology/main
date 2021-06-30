@@ -1,10 +1,10 @@
-##Welcome to Q-methodology plugin for JSPsych library. 
+##Welcome to Q-methodology plugin for jsPsych library. 
 
 **How to use the plugin.**
 
 There are two ways you can use the plugin.
 
-A) using [cognition.run](https://www.cognition.run) as a platform to run your experiments or any other online platform [read JSPsych website for more on hosting experiments](https://www.jspsych.org/overview/running-experiments/#hosting-the-experiment-and-saving-the-data)
+A) using [cognition.run](https://www.cognition.run) as a platform to run your experiments or any other online platform [read jsPsych website for more on hosting experiments](https://www.jspsych.org/overview/running-experiments/#hosting-the-experiment-and-saving-the-data)
 
 B) set up your own instance, and write your own experiment using the plugin as one of the trials. 
 
