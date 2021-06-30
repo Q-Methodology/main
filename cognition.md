@@ -1,8 +1,8 @@
-#Getting around cogntion.run website.
+# Getting around cogntion.run website.
 
 The purpose of this website is to allow users to create and run experiments without the hassle of learning to set-up a server for their jsPsych experiments. 
 
-##
+## list
 1. Create an account on the website (free). 
 
 2. Login and go to your tasks. If you are not redirected, go to the cognition.run website and find the icon go to tasks on the top right. 
