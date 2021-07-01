@@ -5,7 +5,8 @@ The purpose of this website is to allow users to create and run experiments with
 ## Step-by-step instructions
 
 Go to [cognition.run website](https://www.cognition.run)
-<img src="https://github.com/kernel52/Q-methodology/blob/8e9a5488bed7c13e019a5167727b95e4af5fd247/images/001.jpg" height="100px" alt="create account" />
+ 
+<img src="https://github.com/kernel52/Q-methodology/blob/8e9a5488bed7c13e019a5167727b95e4af5fd247/images/001.jpg" height="20%" alt="create account" />
 
 
 1. Create an account on the website (free). 
