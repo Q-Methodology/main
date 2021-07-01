@@ -1,3 +1,7 @@
+
+<img src="images/001.jpg" height="20%" alt="create account" />
+
+
 # Getting around cogntion.run website.
 
 The purpose of this website is to allow users to create and run experiments without the hassle of learning to set-up a server for their jsPsych experiments. 
