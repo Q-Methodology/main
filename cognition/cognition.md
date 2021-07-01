@@ -9,13 +9,16 @@ Go to [cognition.run website](https://www.cognition.run)
 <img src="https://github.com/kernel52/Q-methodology/blob/8e9a5488bed7c13e019a5167727b95e4af5fd247/images/001.jpg" height="20%" alt="create account" />
 
 
-1. Create an account on the website (free). 
-![signup](https://github.com/kernel52/Q-methodology/blob/a4e978bea7a33c71867add7807bfcc8e9e2efa3e/images/002.PNG "signup")
+1. Create an account on the website (free).
+  
+<img src="https://github.com/kernel52/Q-methodology/blob/a4e978bea7a33c71867add7807bfcc8e9e2efa3e/images/002.PNG" height="20%" alt="signup" /> 
+
 
 2. Login and go to your tasks. If you are not redirected, go to the [cognition.run website](https://www.cognition.run) and find the icon go to tasks on the top right. 
+  
 ![go to](https://github.com/kernel52/Q-methodology/blob/a4e978bea7a33c71867add7807bfcc8e9e2efa3e/images/006.PNG "go to")
-
-3. This is what we consider your back-end. 
+  
+3. This is what we consider your back-end.   
 Here is where you can manage all of your experiments, and where you have a couple of examples to play around with. 
 ![back-end](https://github.com/kernel52/Q-methodology/blob/a4e978bea7a33c71867add7807bfcc8e9e2efa3e/images/003.PNG "back-end")
 
