@@ -4,7 +4,7 @@ The purpose of this website is to allow users to create and run experiments with
 
 ## list
 1. Create an account on the website (free). 
-![create account](https://github.com/kernel52/Q-methodology/images/001.png "create account")
+![create account](https://github.com/kernel52/Q-methodology/images/001.jpg "create account")
 
 2. Login and go to your tasks. If you are not redirected, go to the cognition.run website and find the icon go to tasks on the top right. 
 
