@@ -38,3 +38,6 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
+
+https://pages.github.com/themes/
+
