@@ -36,7 +36,7 @@ Advanced settings are not needed unless some specific parameters are needed in y
 
 (Here you can find the link to the experiment, that you can share with your participants, the Design block where you can modify the task and after that the data collection where all the results will be registered and finally an option to delete the task 
   
-<img src="../images/007.PNG" height="20%" alt="design block" style="border: 1px dotted black"/>
+<img src="../images/007.jpeg" height="20%" alt="design block" style="border: 1px dotted black"/>
 
 ### 7. Under Design, you can have Configuration (where you have the name of the experiment and the advanced settings) 
 The source code where all the code will be added. 
@@ -44,7 +44,7 @@ Then you have two options about Informed concent (in case you need it for your e
 
 **Click on the source code and you are in front of the main panel to design your task.**
   
-  <img src="../images/008.PNG" height="20%" alt="design block" style="border: 1px dotted black"/> 
+  <img src="../images/008.jpeg" height="20%" alt="design block" style="border: 1px dotted black"/> 
 
 
 
