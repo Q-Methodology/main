@@ -6,7 +6,7 @@ The purpose of this website is to allow users to create and run experiments with
 
 ### 1. Go to [cognition.run website](https://www.cognition.run)
 
-<img src="../images/001.jpg" height="20%" alt="create account" border="1px dotted black"/>
+<img src="../images/001.jpg" height="20%" alt="create account" style="border: 1px dotted black"/>
 
 
 ### 2. Create an account on the website (free).
