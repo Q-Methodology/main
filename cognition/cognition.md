@@ -6,7 +6,7 @@ The purpose of this website is to allow users to create and run experiments with
 
 ### 1. Go to [cognition.run website](https://www.cognition.run)
 
-<img src="../images/001.jpg" height="20%" alt="create account" style="border:1px solid red;" border="1px solid black"/>
+<img src="../images/001.jpg" height="20%" alt="create account" border="1px dotted black"/>
 
 
 ### 2. Create an account on the website (free).
@@ -14,15 +14,15 @@ The purpose of this website is to allow users to create and run experiments with
 <img src="../images/002.PNG" height="20%" alt="signup" /> 
 
 
-3. Login and go to your tasks. If you are not redirected, go to the [cognition.run website](https://www.cognition.run) and find the icon go to tasks on the top right. 
+### 3. Login and go to your tasks. If you are not redirected, go to the [cognition.run website](https://www.cognition.run) and find the icon go to tasks on the top right. 
   
 ![go to](../images/006.PNG "go to")
   
-4. This is what we consider your back-end.   
+### 4. This is what we consider your back-end.   
 Here is where you can manage all of your experiments, and where you have a couple of examples to play around with. 
 ![back-end](../images/003.PNG "back-end")
 
-5. For our purposes, we will create a new Task clicking the button. 
+### 5. For our purposes, we will create a new Task clicking the button. 
 In this form, please provide a name for your task, and save, unless you want to check the advanced settings. 
 
 ![tasks](../images/004.PNG "tasks")
@@ -31,13 +31,13 @@ In this form, please provide a name for your task, and save, unless you want to 
 Advanced settings are not needed unless some specific parameters are needed in your experiment.
 ![settings](../images/005.PNG "settings")
 
-6. Once you hit save, you are redirected in the control panel of the specific task.
+### 6. Once you hit save, you are redirected in the control panel of the specific task.
 
 (Here you can find the link to the experiment, that you can share with your participants, the Design block where you can modify the task and after that the data collection where all the results will be registered and finally an option to delete the task 
 
 ![design block](../images/007.jpeg "design block")
 
-7. Under Design, you can have Configuration (where you have the name of the experiment and the advanced settings) 
+### 7. Under Design, you can have Configuration (where you have the name of the experiment and the advanced settings) 
 The source code where all the code will be added. 
 Then you have two options about Informed concent (in case you need it for your experiments) and collaborators, if you want to share access with someone else. 
 
@@ -46,9 +46,9 @@ Then you have two options about Informed concent (in case you need it for your e
 ![design block](../images/008.jpeg "design block")
 
 
-8. Here you get the settings you need to customise. 
+### 8. Here you get the settings you need to customise. 
 
-### Create your own experiment. 
+#### Create your own experiment. 
 
 On the **left** you will have to choose the version of jsPsych library, [add the necessary files](#files) and the [stimuli]() (in our case, the images you want). 
 
