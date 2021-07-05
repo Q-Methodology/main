@@ -85,6 +85,8 @@ b. Download and add the following <a name="files"></a>files on the left under **
    [jspsych-grid.css](../source/jspsych-grid.css)
    [jspsych-draggable.js](../source/jspsych-draggable.js)
    [jspsych-grid.js](../source/jspsych-grid.js)
+   <a href="../source/jspsych-grid.js">jspsych-grid.js</a>
+   
 
   ```
 
