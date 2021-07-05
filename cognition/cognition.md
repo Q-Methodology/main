@@ -52,20 +52,26 @@ Then you have two options about Informed concent (in case you need it for your e
 
 #### Create your own experiment. 
 
-On the **left** you will have to choose the version of jsPsych library, [add the necessary files](#files) and the [stimuli]() (in our case, the images you want). 
+On the **left** you will have to choose the version of jsPsych library _(if you are unsure, you can leave the default option)_, [add the necessary files](#files) and the [stimuli](#) (in our case, the images you want). 
 
-In the **middle** *(black box)* you will paste the code that you have produced from the [constructor](/constructor/constructor) or you will be able to write your own code (if you know how to code in jsPsych). 
+In the **middle** *(black box)* you will paste the code that you have produced from the [constructor](../constructor/constructor) or you will be able to write your own code (if you know how to code in jsPsych). 
 
 On the **right** panel you will be able to test your experiment in demo mode. If you *don't* want to see this, you can click on disable preview. 
 
 a. You can leave the jsPsych library version as is: 6.3.1 
-b. Download and add the following files on the left under External JS, CSS. These files will allow cognition to process the Q-methodology trial.
-  
+b. Download and add the following files on the left under **External JS, CSS**. These files will allow cognition to recognise the Q-methodology trial for you to use it.
+
+
+<a name="files"></a>
   ```
+
   The files you should have are: 
-  .css 
-  .js 
-  
+   [jquery-3.6.0.min.js](../source/jquery-3.6.0.min.js)
+   [jspsych-grid.css](../source/jspsych-grid.css)
+   [jspsych-draggable.js](../source/jspsych-draggable.js)
+   [jspsych-grid.js](../source/jspsych-grid.js)
+  [I'm a relative reference to a repository file](../blob/master/LICENSE)
+
   ```
 
 c. Under stimuli, you can upload the images that you want to use for your experiment. 
