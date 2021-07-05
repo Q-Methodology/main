@@ -1,0 +1,85 @@
+form {text-align: left;}
+
+form input {padding: 10px;
+margin: 10px;}
+
+#jspsych-survey-html-form-next{ text-align: center; margin: 15px; padding: 10px 15px;}
+
+#grid-container {
+	width: 900px;
+	margin: 0 auto;
+	padding-bottom: 25px;
+}
+
+#grid-container > div {
+	text-align: center;
+	//width: 88px;
+	//height: 31px;
+	margin: 0px 1px 1px 0px;
+	padding: 0px 0px;
+}
+
+#grid-container > div.placement {
+	//float: left;
+	border: 1px solid black;
+}
+
+a {
+	color: none;
+	text-decoration: none;
+}
+
+#grid-container {
+	display: grid;
+	//grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+	// grid-template-columns: 33% 33% 33%;
+	// grid-template-rows: 31px 31px 31px;
+	grid-column-gap: 1px;
+	// grid-row-gap: 0px
+}
+
+// add some padding into images
+#images {margin: 5px;}
+
+#images a {
+	padding: 5px 10px;
+}
+
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/* Default to hidden */
+	display: none;
+	/* Overlay entire screen */
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* A bit of padding around image */
+	padding: 1em;
+	/* Translucent background */
+	background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Unhide the lightbox when it's the target */
+
+.lightbox:target {
+	display: block;
+}
+
+.lightbox span {
+	/* Full width and height */
+	display: block;
+	width: 100%;
+	width: 50%; margin: 0 auto; /* override 100% but center in screen */
+	height: 100%;
+	/* Size and position background image */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
