@@ -21,7 +21,7 @@ In order to create your own Q-methodology grid, you will need to include the fol
   timeline.push(trial);
 ```
 
-```
+<pre>
 **Grid size**
 must be one of the following
 [15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 34, 35, 36, 38, 40, 42, 44, 45, 46, 48, 50, 52, 54, 55, 56, 58, 60, 62, 64]
@@ -31,4 +31,4 @@ Include the image filenames under _/images/_ folder, if omitted, the plugin expe
 
 **width and height**
 Depending on the size of your grid, you might want to limit these for the grid to fit in the display
-```
+<\pre>
