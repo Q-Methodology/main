@@ -98,3 +98,8 @@ You can test the experiment on the right hand side and if you are satisfied you 
 To access it easily, just click on the name of the experiment on the top of the page 
 (Tasks / [experiment_name](#) / Edit)
 
+### 11. Collect answers. 
+  
+  If you go back to your experiment's control panel, under Data Collection, you will be able to see all the users who run your experiment. You will be given the option to download a complete csv file, or to see individual runs of the experiment.
+
+**N.B.** cognition.run at the moment provides a unmodifiable data structure. You will need to post-process the data to extract the information you need. 
