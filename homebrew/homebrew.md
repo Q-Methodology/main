@@ -33,5 +33,14 @@ Include the image filenames under _/images/_ folder, if omitted, the plugin expe
 Depending on the size of your grid, you might want to limit these for the grid to fit in the display
 <\pre>
 
+
+  ```
+  The files you should have (at minimum) are: 
+   [jquery-3.6.0.min.js](../source/jquery-3.6.0.min.js)
+   [jspsych-grid.css](../source/jspsych-grid.css)
+   [jspsych-draggable.js](../source/jspsych-draggable.js)
+   [jspsych-grid.js](../source/jspsych-grid.js)
+  ```
+
 ---
 [Back to the homepage](/Q-methodology/)
