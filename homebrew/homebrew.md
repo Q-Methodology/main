@@ -32,3 +32,6 @@ Include the image filenames under _/images/_ folder, if omitted, the plugin expe
 **width and height**
 Depending on the size of your grid, you might want to limit these for the grid to fit in the display
 <\pre>
+
+---
+[Back to the homepage](/Q-methodology/)
