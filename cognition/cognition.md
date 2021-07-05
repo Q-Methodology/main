@@ -78,7 +78,7 @@ On the **right** panel you will be able to test your experiment in demo mode. If
 a. You can leave the jsPsych library version as is: 6.3.1 
 b. Download and add the following <a name="files"></a>files on the left under **External JS, CSS**. These files will allow cognition to recognise the Q-methodology trial for you to use it.
   
-  ```
+  <pre>
 
   The files you should have (at minimum) are: 
    [jquery-3.6.0.min.js](../source/jquery-3.6.0.min.js)
@@ -88,7 +88,7 @@ b. Download and add the following <a name="files"></a>files on the left under **
    <a href="../source/jspsych-grid.js">jspsych-grid.js</a>
    
 
-  ```
+  </pre>
 
 c. Under stimuli, you will upload the images that you want to use for your experiment. Please make sure you respect the image dimensions
   
