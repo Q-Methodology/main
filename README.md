@@ -9,30 +9,9 @@ A) using [cognition.run](https://www.cognition.run) as a platform to run your ex
 B) set up your own instance, and write your own experiment using the plugin as one of the trials. 
 
 
-If you lack the technical skills to write Javascript code required to run experiments, we are offering you a simple creator that will construct the experiment code you need to use in cognition.run, but it can also be used in your own instance (with a bit of HTML coding to wrap around the javascript code). 
+If you lack the technical skills to write Javascript code required to run experiments, we are offering you a [simple constructor](./constructor/constructor) that will help you construct the code you need to use in cognition.run. 
+The same constructor, can also be used in your own instance _(with a bit of HTML coding to wrap around the javascript code)_. 
 
-Also, here you can find instructions and a [video](https://www.youtube.com/watch?v=O628dNA7WCc) on how to use cognition.run to do your experiments. 
-
-**N.B.** cognition.run does provide an data saving mechanism that is not easy to manipulate. You will get plenty of data you will have to clean-up before processing the data. 
-
-B) link to existing notes, explain the plugin and the settings. 
+Also, you can find written [instructions](#./cognition/cognition) and a [video](https://www.youtube.com/watch?v=O628dNA7WCc) on how to use cognition.run to perform your experiments. 
 
 
-How to set up your own instance to run experiments. 
-
-Provide links with the necessary information. 
-https://softdev.ppls.ed.ac.uk/online_experiments/data.html
-https://softdev.ppls.ed.ac.uk/online_experiments/jspsych.html
-
-```
-  var trial = {
-    type: "grid",
-    key: 'ESCAPE' //The key to finish the experiment
-    size: 32, //the grid size
-    images: ['001.jpg','003.jpg','004.jpg'],
-    width: 88, //the width of the images
-    height: 31, //the height of images
-    instructions: '',
-    headtitle: '',
-}
-```
