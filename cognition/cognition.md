@@ -81,12 +81,10 @@ b. Download and add the following <a name="files"></a>files on the left under **
   <pre>
 
   The files you should have (at minimum) are: 
-   [jquery-3.6.0.min.js](../source/jquery-3.6.0.min.js)
-   [jspsych-grid.css](../source/jspsych-grid.css)
-   [jspsych-draggable.js](../source/jspsych-draggable.js)
-   [jspsych-grid.js](../source/jspsych-grid.js)
-   <a href="../source/jspsych-grid.js">jspsych-grid.js</a>
-   
+  <a href="../source/jquery-3.6.0.min.js">jquery-3.6.0.min.js</a>
+  <a href="../source/jspsych-grid.css">jspsych-grid.css</a>
+  <a href="../source/jspsych-draggable.js">jspsych-draggable.js</a>
+  <a href="../source/jspsych-grid.js">jspsych-grid.js</a>
 
   </pre>
 
