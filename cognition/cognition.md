@@ -79,12 +79,12 @@ a. You can leave the jsPsych library version as is: 6.3.1
 b. Download and add the following <a name="files"></a>files on the left under **External JS, CSS**. These files will allow cognition to recognise the Q-methodology trial for you to use it.
   
   ```
+
   The files you should have (at minimum) are: 
    [jquery-3.6.0.min.js](../source/jquery-3.6.0.min.js)
    [jspsych-grid.css](../source/jspsych-grid.css)
    [jspsych-draggable.js](../source/jspsych-draggable.js)
    [jspsych-grid.js](../source/jspsych-grid.js)
-  [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
   ```
 
