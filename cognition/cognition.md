@@ -60,7 +60,7 @@ _Here you have_
   
   
   
-### 8. Click on the source code and you are in front of the main panel to design your task.**
+### 8. Click on the source code and you are in front of the main panel to design your task.
   
   <img src="../images/008.jpeg" height="20%" alt="design block" style="border: 1px dotted black"/> 
 
