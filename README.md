@@ -6,7 +6,7 @@ There are two ways you can use the plugin.
 
 A) using [cognition.run](https://www.cognition.run) as a platform to run your experiments or any other online platform [read JSPsych website for more on hosting experiments](https://www.jspsych.org/overview/running-experiments/#hosting-the-experiment-and-saving-the-data)
 
-B) set up your own instance, and write your own experiment using the plugin as one of the trials. 
+B) set up your own instance, and write your own experiment using the [plugin](./homebrew/homebrew) as one of the trials. 
 
 
 If you lack the technical skills to write Javascript code required to run experiments, we are offering you a [simple constructor](./constructor/constructor) that will help you construct the code you need to use in cognition.run. 
