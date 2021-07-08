@@ -1,4 +1,12 @@
-# Welcome to Q-methodology plugin for JSPsych library. 
+# Welcome to Q-methodology plugin for jsPsych library. 
+
+## A few words on the jsPsych library
+
+## Why use this tool
+
+## What is the added value
+
+
 
 **How to use the plugin.**
 
