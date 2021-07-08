@@ -1,4 +1,9 @@
-# Getting around cognition.run website.
+# Cognition website
+
+## A few words on the website
+
+
+## Getting around cognition.run website.
 
 The purpose of this website is to allow users to create and run experiments without the hassle of learning to set-up a server for their jsPsych experiments. 
 
