@@ -6,7 +6,9 @@ margin: 10px;}
 #jspsych-survey-html-form-next{ text-align: center; margin: 15px; padding: 10px 15px;}
 
 #grid-container {
-	width: 900px;
+	//min-width: 550px;
+	//width: 900px;
+	//max-width: 1250px;
 	margin: 0 auto;
 	padding-bottom: 25px;
 }
