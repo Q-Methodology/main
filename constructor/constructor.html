@@ -218,11 +218,14 @@
                 <p>Add the images from your images folder here</p>
                 <form action="#" class="dropzone" id="my-awesome-dropzone" />
                 </form>
-                <input type="button" id="save" value="Save page" onclick='constructContent();' class="btn btn-primary" />
-                <textarea id="cognition" class="form-control" rows="30"></textarea>
+                <input type="button" id="save" value="Generate code" onclick='constructContent();' class="btn btn-primary" />
+                <input type="button" id="copy" value="Copy code to clipboard" class="js-textareacopybtn btn btn-primary" />
+                <textarea id="cognition" class="form-control js-copytextarea" rows="30"></textarea>
             </div>
+            <a href="https://www.congnition.run/">Go to congnition.run website</a>
         </div>
         <div class="col-auto fixed-bottom">
+            
         </div>
     </div>
 </body>
@@ -419,6 +422,27 @@ function constructContent() {
     });
     `;
 }
+    
+/* 
+* copy code to clipboard
+* https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+*/    
+ var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+copyTextareaBtn.addEventListener('click', function(event) {
+  var copyTextarea = document.querySelector('.js-copytextarea');
+  copyTextarea.focus();
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+});   
+    
 </script>
 
 </html>
