@@ -7,7 +7,6 @@
     </link>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </link>
-    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <script src="dropzone.min.js"></script>
     <script>
         // "myAwesomeDropzone" is the camelized version of the HTML element's ID
@@ -24,6 +23,19 @@
         border: #f8f9fa 0.2rem solid;
         padding: 0.6rem;
     }
+  .info {
+    display:inline-block;
+    padding:0px 3px 6px 3px;
+    color:blue;
+    font-size:24px;
+    border-radius:50%;
+    border:solid 3px #E83188;
+    width:20px;
+    height:20px;
+    font-weight:bold;
+    text-align:center;
+    background:red
+}
     </style>
 </head>
 
@@ -37,7 +49,7 @@
                 <p>To go back to the home page click <a href="/Q-methodology/">here</a></p>
                 <form>
                     <fieldset>
-                        <label for="wantwelcome">Do you want a welcome message? <i class="icon-info-sign" data-tooltip="This will be the welcome message of your experiment" data-tooltip-location="right">&#9432;</i></label>
+                        <label for="wantwelcome">Do you want a welcome message? <span class="info" data-tooltip="This will be the welcome message of your experiment" data-tooltip-location="right">&#9432;</span></label>
                         <div class="form-check">
                             <input type="radio" id="wantwelcome" name="wantwelcome" value="Yes" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
                             <label class="form-check-label">Yes</label>
@@ -102,7 +114,7 @@
                                     <div class="form-group" style="display: none;">
                                         <label for="idLabel">User ID label</label>
                                         <input type="text" id="idLabel" placeholder="ex: Please write your ID" value="" class="form-control" />
-                                        <label for="idPlaceholder">User ID Placeholder</label>
+                                        <label for="idPlaceholder">User ID Placeholder <span class="info" data-tooltip="The placeholder is a short hint that is displayed in the input field before the user enters a value." data-tooltip-location="right">&#9432;</span></label>
                                         <input type="text" id="idPlaceholder" placeholder="ex: 54852245" value="" class="form-control" />
                                     </div>
                                 </fieldset>
