@@ -18,10 +18,13 @@
         addRemoveLinks: true,
         };
     </script>
- <link rel="stylesheet" type="text/css" href="tooltip.css">
-<style type="text/css">
-    fieldset {border: #f8f9fa 0.2rem solid; padding: 0.6rem;}    
-</style>
+    <link rel="stylesheet" type="text/css" href="tooltip.css">
+    <style type="text/css">
+    fieldset {
+        border: #f8f9fa 0.2rem solid;
+        padding: 0.6rem;
+    }
+    </style>
 </head>
 
 <body>
@@ -30,207 +33,217 @@
             <div class="col-auto">
                 <h1>Construct your experiment</h1>
                 <p> This is part of the Q-methodology tools </p>
-                      
                 <h2>You can leave blank what you don't want to use</h2>
                 <p>To go back to the home page click <a href="/Q-methodology/">here</a></p>
                 <form>
                     <fieldset>
-                    <label for="wantwelcome">Do you want a welcome message? <i class="icon-info-sign" data-tooltip="This will be the welcome message of your experiment" data-tooltip-location="right"></i></label>
-                    <div class="form-check">
-                        <input type="radio" id="wantwelcome" name="wantwelcome" value="Yes" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
-                        <label class="form-check-label">Yes</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" id="wantwelcome" name="wantwelcome" checked="checked" value="No" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
-                        <label class="form-check-label">No</label>
-                    </div>
-                    <div class="form-group" style="display:none;">
-                        <!-- <label>Include a welcome message</label> -->
-                        <input class="form-control" type="text" id="welcome" value="" placeholder="Your welcome message for the user" />
-                    </div>
+                        <label for="wantwelcome">Do you want a welcome message? <i class="icon-info-sign" data-tooltip="This will be the welcome message of your experiment" data-tooltip-location="right"></i></label>
+                        <div class="form-check">
+                            <input type="radio" id="wantwelcome" name="wantwelcome" value="Yes" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="wantwelcome" name="wantwelcome" checked="checked" value="No" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
+                            <label class="form-check-label">No</label>
+                        </div>
+                        <div class="form-group" style="display:none;">
+                            <!-- <label>Include a welcome message</label> -->
+                            <input class="form-control" type="text" id="welcome" value="" placeholder="Your welcome message for the user" />
+                        </div>
                     </fieldset>
                     <br />
                     <fieldset>
-                    <label>Do you want to include instructions?</label>
-                    <div class="form-check">
-                        <input type="radio" id="wantinstructions" name="wantinstructions" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'instructions');" />
-                        <label class="form-check-label">Yes</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" id="wantinstructions" name="wantinstructions" checked="checked" class="form-check-input" value="No" onclick="yesnoCheck(this.id,'instructions');" />
-                        <label class="form-check-label">No</label>
-                    </div>
-                   
-                    <br />
-                    
-                    <div class="form-group" style="display:none;">
-                        <!-- <label>Include instructions</label> -->
-                        <textarea placeholder="Write here your instructions" class="form-control" id="instructions"></textarea>
-                    </div>
-                    </fieldset>
-                    <fieldset>                        
-                    <label>Would you like a questionnaire?</label>
-                    <div class="form-check">
-                        <input type="radio" id="wantquestionnaire" name="wantquestionnaire" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
-                        <label class="form-check-label">Yes</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" id="wantquestionnaire" name="wantquestionnaire" checked="checked" class="form-check-input" value="No" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
-                        <label class="form-check-label">No</label>
-                    </div>
-                    <div style="display:none;">
-                        <span id="trigger">
-                            <!--show hide all questions at once--></span>
+                        <label>Do you want to include instructions?</label>
+                        <div class="form-check">
+                            <input type="radio" id="wantinstructions" name="wantinstructions" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'instructions');" />
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="wantinstructions" name="wantinstructions" checked="checked" class="form-check-input" value="No" onclick="yesnoCheck(this.id,'instructions');" />
+                            <label class="form-check-label">No</label>
+                        </div>
                         <div class="form-group" style="display:none;">
-                            <label for="preamble"> Preamble </label>
-                            <input type="text" id="preamble" placeholder="ex: Please fill in the questionnaire" class="form-control" />
+                            <!-- <label>Include instructions</label> -->
+                            <textarea placeholder="Write here your instructions" class="form-control" id="instructions"></textarea>
                         </div>
-                        <label>Questionnaire elements</label>
-                        <fieldset>
-                        <div class="form-group">
-                            <label for="idField">Do you need an ID field?</label>
-                            <div class="form-check">
-                                <input type="radio" id="wantidField" name="wantidField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'idPlaceholder');" />
-                                <label class="form-check-label">Yes</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="wantidField" name="wantidField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'idPlaceholder');" />
-                                <label class="form-check-label">No</label>
-                            </div>
-                            <div class="form-group" style="display: none;">
-                                <label for="idLabel">User ID label</label>
-                                <input type="text" id="idLabel" placeholder="ex: Please write your ID" value="" class="form-control" />
-                                <label for="idPlaceholder">User ID Placeholder</label>
-                                <input type="text" id="idPlaceholder" placeholder="ex: 54852245" value="" class="form-control" />
-                            </div>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <label>Would you like a questionnaire?</label>
+                        <div class="form-check">
+                            <input type="radio" id="wantquestionnaire" name="wantquestionnaire" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
+                            <label class="form-check-label">Yes</label>
                         </div>
-                        <div class="form-group">
-                            <label for="wantgenderField">Do you want to collect gender information?</label>
-                            <div class="form-check">
-                                <input type="radio" id="wantgenderField" name="wantgenderField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'genderLabel');" />
-                                <label class="form-check-label">Yes</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="wantgenderField" name="wantgenderField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'genderLabel');" />
-                                <label class="form-check-label">No</label>
-                            </div>
-                            <div class="form-group" style="display: none;">
-                                <label for="genderLabel">User Gender label</label>
-                                <input type="text" id="genderLabel" placeholder="ex: Please select gender" value="" class="form-control" />
-                                <label for="maleLabel">Male label</label>
-                                <input type="text" id="maleLabel" value="Male" class="form-control" />
-                                <label for="femaleLabel">Female label</label>
-                                <input type="text" id="femaleLabel" value="Female" class="form-control" />
-                                <label for="otherLabel">Other label</label>
-                                <input type="text" id="otherLabel" value="Other" class="form-control" />
-                            </div>
+                        <div class="form-check">
+                            <input type="radio" id="wantquestionnaire" name="wantquestionnaire" checked="checked" class="form-check-input" value="No" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
+                            <label class="form-check-label">No</label>
                         </div>
-                        <div class="form-group">
-                            <label for="wantageField">Do you need an Age field?</label>
-                            <div class="form-check">
-                                <input type="radio" id="wantageField" name="wantageField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'agePlaceholder');" />
-                                <label class="form-check-label">Yes</label>
+                        <div style="display:none;">
+                            <span id="trigger">
+                                <!--show hide all questions at once--></span>
+                            <div class="form-group" style="display:none;">
+                                <label for="preamble"> Preamble </label>
+                                <input type="text" id="preamble" placeholder="ex: Please fill in the questionnaire" class="form-control" />
                             </div>
-                            <div class="form-check">
-                                <input type="radio" id="wantageField" name="wantageField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'agePlaceholder');" />
-                                <label class="form-check-label">No</label>
-                            </div>
-                            <div class="form-group" style="display: none;">
-                                <label for="ageLabel">User Age label</label>
-                                <input type="text" id="ageLabel" value="" class="form-control" />
-                                <label for="agePlaceholder">User Age Placeholder</label>
-                                <input type="number" id="agePlaceholder" value="" class="form-control" />
-                            </div>
+     
+                            <label>Questionnaire elements</label>
+                            
+                                <div class="form-group">
+                                    <fieldset>
+                                    <label for="idField">Do you need an ID field?</label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantidField" name="wantidField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'idPlaceholder');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantidField" name="wantidField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'idPlaceholder');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="idLabel">User ID label</label>
+                                        <input type="text" id="idLabel" placeholder="ex: Please write your ID" value="" class="form-control" />
+                                        <label for="idPlaceholder">User ID Placeholder</label>
+                                        <input type="text" id="idPlaceholder" placeholder="ex: 54852245" value="" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>                                    
+                                    <label for="wantgenderField">Do you want to collect gender information?</label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantgenderField" name="wantgenderField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'genderLabel');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantgenderField" name="wantgenderField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'genderLabel');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="genderLabel">User Gender label</label>
+                                        <input type="text" id="genderLabel" placeholder="ex: Please select gender" value="" class="form-control" />
+                                        <label for="maleLabel">Male label</label>
+                                        <input type="text" id="maleLabel" value="Male" class="form-control" />
+                                        <label for="femaleLabel">Female label</label>
+                                        <input type="text" id="femaleLabel" value="Female" class="form-control" />
+                                        <label for="otherLabel">Other label</label>
+                                        <input type="text" id="otherLabel" value="Other" class="form-control" />
+                                    </div>
+                                </fieldset>    
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>    
+                                    <label for="wantageField">Do you need an Age field?</label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantageField" name="wantageField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'agePlaceholder');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantageField" name="wantageField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'agePlaceholder');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="ageLabel">User Age label</label>
+                                        <input type="text" id="ageLabel" value="" class="form-control" />
+                                        <label for="agePlaceholder">User Age Placeholder</label>
+                                        <input type="number" id="agePlaceholder" value="" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>    
+                                    <label for="wantnationalityField">Do you need an Nationality field?</label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantnationalityField" name="wantnationalityField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'nationalityLabel');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantnationalityField" name="wantnationalityField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'nationalityLabel');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="nationalityLabel">User Nationality label</label>
+                                        <input type="text" id="nationalityLabel" value="" class="form-control" />
+                                        <label for="nationalityPlaceholder">User Nationality Placeholder</label>
+                                        <input type="text" id="nationalityPlaceholder" value="" placeholder="ex: Italian" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>
+                                    <label for="wanthandinessField">Do you need an Handiness field?</label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wanthandinessField" name="wanthandinessField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'handinessLabel');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wanthandinessField" name="wanthandinessField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'handinessLabel');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="handinessLabel">User Handiness label</label>
+                                        <input type="text" id="handinessLabel" value="" placeholder="ex: Please select handiness" class="form-control" />
+                                        <input type="text" id="leftLabel" value="Left" class="form-control" />
+                                        <input type="text" id="rightLabel" value="Right" class="form-control" />
+                                    </div>
+                                </fieldset>    
+                                </div>
                         </div>
-                        <div class="form-group">
-                            <label for="wantnationalityField">Do you need an Nationality field?</label>
-                            <div class="form-check">
-                                <input type="radio" id="wantnationalityField" name="wantnationalityField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'nationalityLabel');" />
-                                <label class="form-check-label">Yes</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="wantnationalityField" name="wantnationalityField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'nationalityLabel');" />
-                                <label class="form-check-label">No</label>
-                            </div>
-                            <div class="form-group" style="display: none;">
-                                <label for="nationalityLabel">User Nationality label</label>
-                                <input type="text" id="nationalityLabel" value="" class="form-control" />
-                                <label for="nationalityPlaceholder">User Nationality Placeholder</label>
-                                <input type="text" id="nationalityPlaceholder" value="" placeholder="ex: Italian" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="wanthandinessField">Do you need an Handiness field?</label>
-                            <div class="form-check">
-                                <input type="radio" id="wanthandinessField" name="wanthandinessField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'handinessLabel');" />
-                                <label class="form-check-label">Yes</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" id="wanthandinessField" name="wanthandinessField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'handinessLabel');" />
-                                <label class="form-check-label">No</label>
-                            </div>
-                            <div class="form-group" style="display: none;">
-                                <label for="handinessLabel">User Handiness label</label>
-                                <input type="text" id="handinessLabel" value="" placeholder="ex: Please select handiness" class="form-control" />
-                                <input type="text" id="leftLabel" value="Left" class="form-control" />
-                                <input type="text" id="rightLabel" value="Right" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                 <fieldset>                        
-                 </fieldset>
-                    ---------------------------
+                </fieldset>
                 </form>
                 <p> Please select the settings for your Q-experiment </p>
                 <form>
                     <fieldset>
-                    <label for="grid"></label>
-                    <select class="form-control" id="grid">
-                        <option value="15">15</option>
-                        <option selected="selected" value="16">16</option>
-                        <option value="18">18</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="30">30</option>
-                        <option value="32">32</option>
-                        <option value="34">34</option>
-                        <option value="35">35</option>
-                        <option value="36">36</option>
-                        <option value="38">38</option>
-                        <option value="40">40</option>
-                        <option value="42">42</option>
-                        <option value="44">44</option>
-                        <option value="45">45</option>
-                        <option value="46">46</option>
-                        <option value="48">48</option>
-                        <option value="50">50</option>
-                        <option value="52">52</option>
-                        <option value="54">54</option>
-                        <option value="55">55</option>
-                        <option value="56">56</option>
-                        <option value="58">58</option>
-                        <option value="60">60</option>
-                        <option value="62">62</option>
-                        <option value="64">64</option>
-                    </select>
-                    <br />
-                    <label for="width">Select image width</label>
-                    <input type="number" id="width" min="29" max="" value="88" class="form-control" />
-                    <br />
-                    <label for="height">Select image height</label>
-                    <input type="number" id="height" min="10" max="" value="31" class="form-control" />
-                    <br />
-                    <label for="gridHeader">Header on top of the grid</label>
-                    <input type="text" id="gridHeader" value="Drag the image to the grid and place it where you want." class="form-control" />
-                    <br />
-                    <label for="gridInstructions">Text on top of the grid</label>
-                    <input type="text" id="gridInstructions" value="Q-experiment" class="form-control" />
+                        <label for="grid"></label>
+                        <select class="form-control" id="grid">
+                            <option value="15">15</option>
+                            <option selected="selected" value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                            <option value="48">48</option>
+                            <option value="50">50</option>
+                            <option value="52">52</option>
+                            <option value="54">54</option>
+                            <option value="55">55</option>
+                            <option value="56">56</option>
+                            <option value="58">58</option>
+                            <option value="60">60</option>
+                            <option value="62">62</option>
+                            <option value="64">64</option>
+                        </select>
+                        <br />
+                        <label for="width">Select image width</label>
+                        <input type="number" id="width" min="29" max="" value="88" class="form-control" />
+                        <br />
+                        <label for="height">Select image height</label>
+                        <input type="number" id="height" min="10" max="" value="31" class="form-control" />
+                        <br />
+                        <label for="gridHeader">Header on top of the grid</label>
+                        <input type="text" id="gridHeader" value="Drag the image to the grid and place it where you want." class="form-control" />
+                        <br />
+                        <label for="gridInstructions">Text on top of the grid</label>
+                        <input type="text" id="gridInstructions" value="Q-experiment" class="form-control" />
                     </fieldset>
                 </form>
                 <p>Add the images from your images folder here</p>
@@ -238,16 +251,16 @@
                 </form>
                 <input type="button" id="save" value="Generate code" onclick='constructContent();' class="btn btn-primary" />
                 <input type="button" id="copy" value="Copy code to clipboard" class="js-textareacopybtn btn btn-primary" />
+                <br /><br />
                 <form><textarea id="cognition" class="form-control js-copytextarea" rows="30"></textarea></form>
             </div>
             <div class="row">
-            <div class="col-auto">
-                <a href="https://www.congnition.run/">Go to congnition.run website</a>
-            </div>
+                <div class="col-auto">
+                    <a href="https://www.congnition.run/">Go to congnition.run website</a>
+                </div>
             </div>
         </div>
         <div class="col-auto fixed-bottom">
-            
         </div>
     </div>
 </body>
@@ -444,28 +457,26 @@ function constructContent() {
     });
     `;
 }
-    
+
 /* 
-* copy code to clipboard
-* https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
-*/    
- var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+ * copy code to clipboard
+ * https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+ */
+var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 
 copyTextareaBtn.addEventListener('click', function(event) {
-  var copyTextarea = document.querySelector('.js-copytextarea');
-  copyTextarea.focus();
-  copyTextarea.select();
+    var copyTextarea = document.querySelector('.js-copytextarea');
+    copyTextarea.focus();
+    copyTextarea.select();
 
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
-});   
-    
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to copy');
+    }
+});
 </script>
 
 </html>
-
