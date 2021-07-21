@@ -79,6 +79,8 @@ In the **middle** *(black box)* you will paste the code that you have produced f
 On the **right** panel you will be able to test your experiment in demo mode. If you *don't* want to see this, you can click on disable preview.  
   
 ### 9. Create your own experiment.  
+  
+  In order to create your own experiment and execute it, you need to tell cognition how the Q-methodology plugin works and provide the stimuli you have used with the constructor. 
 
 a. You can leave the jsPsych library version as is: 6.3.1  
   
@@ -95,7 +97,8 @@ b. Download and add the following <a name="files"></a>files on the left under **
   </pre>
 
 c. Under stimuli, you will upload the images that you want to use for your experiment. Please make sure you respect the image dimensions
-  
+
+d. Paste the code you got from the constructor
   
 ### 10. Test the experiment
   
@@ -114,3 +117,4 @@ To access it easily, just click on the name of the experiment on the top of the 
   
 ---
 [Back to the homepage](/Q-methodology/)
+[F.A.Q](./errors)
