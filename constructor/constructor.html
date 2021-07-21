@@ -7,6 +7,7 @@
     </link>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </link>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="dropzone.min.js"></script>
     <script>
         // "myAwesomeDropzone" is the camelized version of the HTML element's ID
@@ -17,6 +18,10 @@
         addRemoveLinks: true,
         };
     </script>
+ <link rel="stylesheet" type="text/css" href="tooltip.css">
+<style type="text/css">
+    fieldset {border: #f8f9fa 0.2rem solid; padding: 0.6rem;}    
+</style>
 </head>
 
 <body>
@@ -29,7 +34,8 @@
                 <h2>You can leave blank what you don't want to use</h2>
                 <p>To go back to the home page click <a href="/Q-methodology/">here</a></p>
                 <form>
-                    <label for="wantwelcome">Do you want a welcome message?</label>
+                    <fieldset>
+                    <label for="wantwelcome">Do you want a welcome message? <i class="icon-info-sign" data-tooltip="This will be the welcome message of your experiment" data-tooltip-location="right"></i></label>
                     <div class="form-check">
                         <input type="radio" id="wantwelcome" name="wantwelcome" value="Yes" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
                         <label class="form-check-label">Yes</label>
@@ -42,7 +48,9 @@
                         <!-- <label>Include a welcome message</label> -->
                         <input class="form-control" type="text" id="welcome" value="" placeholder="Your welcome message for the user" />
                     </div>
+                    </fieldset>
                     <br />
+                    <fieldset>
                     <label>Do you want to include instructions?</label>
                     <div class="form-check">
                         <input type="radio" id="wantinstructions" name="wantinstructions" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'instructions');" />
@@ -52,11 +60,15 @@
                         <input type="radio" id="wantinstructions" name="wantinstructions" checked="checked" class="form-check-input" value="No" onclick="yesnoCheck(this.id,'instructions');" />
                         <label class="form-check-label">No</label>
                     </div>
+                   
                     <br />
+                    
                     <div class="form-group" style="display:none;">
                         <!-- <label>Include instructions</label> -->
-                        <textarea placeholder="Provide here your instructions (sanitize?)" class="form-control" id="instructions"></textarea>
+                        <textarea placeholder="Write here your instructions" class="form-control" id="instructions"></textarea>
                     </div>
+                    </fieldset>
+                    <fieldset>                        
                     <label>Would you like a questionnaire?</label>
                     <div class="form-check">
                         <input type="radio" id="wantquestionnaire" name="wantquestionnaire" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
@@ -74,6 +86,7 @@
                             <input type="text" id="preamble" placeholder="ex: Please fill in the questionnaire" class="form-control" />
                         </div>
                         <label>Questionnaire elements</label>
+                        <fieldset>
                         <div class="form-group">
                             <label for="idField">Do you need an ID field?</label>
                             <div class="form-check">
@@ -164,10 +177,13 @@
                             </div>
                         </div>
                     </div>
+                 <fieldset>                        
+                 </fieldset>
                     ---------------------------
                 </form>
                 <p> Please select the settings for your Q-experiment </p>
                 <form>
+                    <fieldset>
                     <label for="grid"></label>
                     <select class="form-control" id="grid">
                         <option value="15">15</option>
@@ -215,15 +231,20 @@
                     <br />
                     <label for="gridInstructions">Text on top of the grid</label>
                     <input type="text" id="gridInstructions" value="Q-experiment" class="form-control" />
+                    </fieldset>
                 </form>
                 <p>Add the images from your images folder here</p>
                 <form action="#" class="dropzone" id="my-awesome-dropzone" />
                 </form>
                 <input type="button" id="save" value="Generate code" onclick='constructContent();' class="btn btn-primary" />
                 <input type="button" id="copy" value="Copy code to clipboard" class="js-textareacopybtn btn btn-primary" />
-                <textarea id="cognition" class="form-control js-copytextarea" rows="30"></textarea>
+                <form><textarea id="cognition" class="form-control js-copytextarea" rows="30"></textarea></form>
             </div>
-            <a href="https://www.congnition.run/">Go to congnition.run website</a>
+            <div class="row">
+            <div class="col-auto">
+                <a href="https://www.congnition.run/">Go to congnition.run website</a>
+            </div>
+            </div>
         </div>
         <div class="col-auto fixed-bottom">
             
