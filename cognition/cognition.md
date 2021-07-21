@@ -98,7 +98,7 @@ b. Download and add the following <a name="files"></a>files on the left under **
 
 c. Under stimuli, you will upload the images that you want to use for your experiment. Please make sure you respect the image dimensions
 
-d. Paste the code you got from the constructor
+d. Paste the code you got from the constructor in the middle window  
   
 ### 10. Test the experiment
   
@@ -116,5 +116,6 @@ To access it easily, just click on the name of the experiment on the top of the 
   
   
 ---
-[Back to the homepage](/Q-methodology/)
+[Back to the homepage](/Q-methodology/)  
+  
 [F.A.Q](./errors)
