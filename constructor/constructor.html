@@ -245,7 +245,7 @@
                         <input type="number" id="height" min="10" max="" value="31" class="form-control" />
                         <br />
                         <label for="gridHeader">Header on top of the grid</label>
-                        <input type="text" id="gridHeader" value="Drag the image to the grid and place it where you want." class="form-control" />
+                        <input type="text" id="gridHeader" value="Drag the image to the grid and place it where you want. Press ESC to finish" class="form-control" />
                         <br />
                         <label for="gridInstructions">Text on top of the grid</label>
                         <input type="text" id="gridInstructions" value="Q-experiment" class="form-control" />
@@ -291,10 +291,18 @@ function yesnoCheck(el, id) {
  */
 function constructContent() {
 
+   var suppresor = `
+   on_finish: function(data) {
+     raw_data = jsPsych.data.get(); 
+     raw_data.pop();
+   },
+   `;
+
     //clear the outcome
     $('cognition').innerHTML = `    
     /* Create timeline var */
     var timeline = [];
+    var questions; //used to store the questionnaire
     `;
 
     // collect images
@@ -314,6 +322,7 @@ function constructContent() {
     type: 'preload',
     images: ${imageArray},
     /*auto_preload: true,*/
+    ${suppresor}
     }
     timeline.push(preload);
     `;
@@ -328,7 +337,8 @@ function constructContent() {
     */
     var welcome = {
     type: "html-keyboard-response",
-    stimulus: "${welcome}"
+    stimulus: "${welcome}",
+    ${suppresor}
     };
     timeline.push(welcome);
     `;
@@ -345,7 +355,8 @@ function constructContent() {
     */
     var instructions = {
     type: "html-keyboard-response",
-    stimulus: "${instructions}"
+    stimulus: "${instructions}",
+    ${suppresor}
     };
     timeline.push(instructions);
     `;
@@ -415,6 +426,12 @@ function constructContent() {
           <input type='radio' name='handiness' id='left' value='${leftLabel}' /> ${leftLabel}
           <input type='radio' name='handiness' id='right' value='${rightLabel}' /> ${rightLabel} <br />  
         `;
+
+         $('cognition').innerHTML += `,      
+         on_finish:function(data){
+            raw_data = jsPsych.data.get();
+            questions = raw_data.pop().response; //get the response object
+         }, `; 
         }
 
         var preamble = $('preamble').value;
@@ -424,6 +441,7 @@ function constructContent() {
       dataAsArray: false,
       autofocus : 'id',
       autocomplete: false,
+      ${suppresor}
       };
 
       timeline.push(questionnaire);
@@ -436,7 +454,8 @@ function constructContent() {
     var height = $("height").value
     var gridInstructions = $("gridInstructions").value
     var gridHeader = $("gridHeader").value
-    $('cognition').innerHTML += `
+  
+  $('cognition').innerHTML += `
   /*
   * define the grid
   * Define the files, the size, and the dimensions of each photo below the grid. 
@@ -449,6 +468,18 @@ function constructContent() {
     height: ${height},
     gridInstructions: "${gridInstructions}",
     gridHeader: "${gridHeader}",
+    on_finish: function(data){
+    `;
+    //Include the function for data manipulation.
+    $('cognition').innerHTML += `  
+    if(questions !=''){
+        //parse questions into variables 
+         Object.entries(questions).forEach(([key, value]) => { data[key]=value });
+    }//end if
+    `;
+  
+  //close the grid.
+  $('cognition').innerHTML += `  }
   };
   timeline.push(grid);
   `
