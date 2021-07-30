@@ -293,7 +293,7 @@ function constructContent() {
 
    var suppresor = `
    on_finish: function(data) {
-     raw_data = jsPsych.data.get(); 
+     raw_data = jsPsych.data.get().values();  
      raw_data.pop();
    },
    `;
