@@ -37,9 +37,10 @@
         <div class="row">
             <div class="col-auto">
                 <h1>Construct your experiment</h1>
-                <p> This is part of the Q-methodology tools </p>
-                <h2>You can leave blank what you don't want to use</h2>
-                <p>To go back to the home page click <a href="/Q-methodology/">here</a></p>
+                <p>This is part of the Q-methodology tools </p>
+                <p>This form can help you construct your experiment without the need to write code yourself.</p>
+                <p class="font-italic">You can leave blank what you don't want to use</p>
+                <p><a class="btn btn-primary" href="/Q-methodology/">Return to the home page</a></p>
                 <form>
                     <fieldset>
                         <label for="wantwelcome">Do you want a welcome message? <span class="info" data-tooltip="This will be the welcome message of your experiment" data-tooltip-location="right">&#9432;</span></label>
@@ -58,7 +59,7 @@
                     </fieldset>
                     <br />
                     <fieldset>
-                        <label>Do you want to include instructions?</label>
+                        <label>Do you want to include instructions? <span class="info" data-tooltip="This will be a page with instructions for the user" data-tooltip-location="right">&#9432;</span></label>
                         <div class="form-check">
                             <input type="radio" id="wantinstructions" name="wantinstructions" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'instructions');" />
                             <label class="form-check-label">Yes</label>
@@ -74,7 +75,7 @@
                     </fieldset>
                     <br />
                     <fieldset>
-                        <label>Would you like a questionnaire?</label>
+                        <label>Would you like a questionnaire? <span class="info" data-tooltip="Should you need to ask questions for your user" data-tooltip-location="right">&#9432;</span></label>
                         <div class="form-check">
                             <input type="radio" id="wantquestionnaire" name="wantquestionnaire" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
                             <label class="form-check-label">Yes</label>
@@ -87,7 +88,7 @@
                             <span id="trigger">
                                 <!--show hide all questions at once--></span>
                             <div class="form-group" style="display:none;">
-                                <label for="preamble"> Preamble </label>
+                                <label for="preamble"> Preamble <span class="info" data-tooltip="Text appearing before the questionnaire" data-tooltip-location="right">&#9432;</span> </label>
                                 <input type="text" id="preamble" placeholder="ex: Please fill in the questionnaire" class="form-control" />
                             </div>
      
@@ -95,7 +96,7 @@
                             
                                 <div class="form-group">
                                     <fieldset>
-                                    <label for="idField">Do you need an ID field?</label>
+                                    <label for="idField">Do you need an ID field? <span class="info" data-tooltip="In case you want to track participants (for example, if you use prolific)" data-tooltip-location="right">&#9432;</span></label>
                                     <div class="form-check">
                                         <input type="radio" id="wantidField" name="wantidField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'idPlaceholder');" />
                                         <label class="form-check-label">Yes</label>
@@ -105,7 +106,7 @@
                                         <label class="form-check-label">No</label>
                                     </div>
                                     <div class="form-group" style="display: none;">
-                                        <label for="idLabel">User ID label</label>
+                                        <label for="idLabel">User ID label <span class="info" data-tooltip="The text to appear next to the field for the ID" data-tooltip-location="right">&#9432;</span></label>
                                         <input type="text" id="idLabel" placeholder="ex: Please write your ID" value="" class="form-control" />
                                         <label for="idPlaceholder">User ID Placeholder <span class="info" data-tooltip="The placeholder is a short hint that is displayed in the input field before the user enters a value." data-tooltip-location="right">&#9432;</span></label>
                                         <input type="text" id="idPlaceholder" placeholder="ex: 54852245" value="" class="form-control" />
@@ -115,7 +116,7 @@
 
                                 <div class="form-group">
                                 <fieldset>                                    
-                                    <label for="wantgenderField">Do you want to collect gender information?</label>
+                                    <label for="wantgenderField">Do you want to collect gender information? <span class="info" data-tooltip="This will add a radio-button to select their gender" data-tooltip-location="right">&#9432;</span></label>
                                     <div class="form-check">
                                         <input type="radio" id="wantgenderField" name="wantgenderField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'genderLabel');" />
                                         <label class="form-check-label">Yes</label>
@@ -125,8 +126,8 @@
                                         <label class="form-check-label">No</label>
                                     </div>
                                     <div class="form-group" style="display: none;">
-                                        <label for="genderLabel">User Gender label</label>
-                                        <input type="text" id="genderLabel" placeholder="ex: Please select gender" value="" class="form-control" />
+                                        <label for="genderLabel">User Gender label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="genderLabel" placeholder="ex: Please select your gender" value="" class="form-control" />
                                         <label for="maleLabel">Male label</label>
                                         <input type="text" id="maleLabel" value="Male" class="form-control" />
                                         <label for="femaleLabel">Female label</label>
@@ -139,7 +140,7 @@
 
                                 <div class="form-group">
                                 <fieldset>    
-                                    <label for="wantageField">Do you need an Age field?</label>
+                                    <label for="wantageField">Do you need an Age field? <span class="info" data-tooltip="This will add a numerical field to select the user's age" data-tooltip-location="right">&#9432;</span></label>
                                     <div class="form-check">
                                         <input type="radio" id="wantageField" name="wantageField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'agePlaceholder');" />
                                         <label class="form-check-label">Yes</label>
@@ -149,9 +150,9 @@
                                         <label class="form-check-label">No</label>
                                     </div>
                                     <div class="form-group" style="display: none;">
-                                        <label for="ageLabel">User Age label</label>
+                                        <label for="ageLabel">User Age label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
                                         <input type="text" id="ageLabel" value="" class="form-control" />
-                                        <label for="agePlaceholder">User Age Placeholder</label>
+                                        <label for="agePlaceholder">User Age Placeholder <span class="info" data-tooltip="The placeholder is a short hint that is displayed in the input field before the user enters a value." data-tooltip-location="right">&#9432;</span></label>
                                         <input type="number" id="agePlaceholder" value="" class="form-control" />
                                     </div>
                                 </fieldset>
@@ -159,7 +160,7 @@
 
                                 <div class="form-group">
                                 <fieldset>    
-                                    <label for="wantnationalityField">Do you need an Nationality field?</label>
+                                    <label for="wantnationalityField">Do you need an Nationality field? <span class="info" data-tooltip="This will add a field for the user to write their nationality." data-tooltip-location="right">&#9432;</span></label>
                                     <div class="form-check">
                                         <input type="radio" id="wantnationalityField" name="wantnationalityField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'nationalityLabel');" />
                                         <label class="form-check-label">Yes</label>
@@ -169,9 +170,9 @@
                                         <label class="form-check-label">No</label>
                                     </div>
                                     <div class="form-group" style="display: none;">
-                                        <label for="nationalityLabel">User Nationality label</label>
+                                        <label for="nationalityLabel">User Nationality label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
                                         <input type="text" id="nationalityLabel" value="" class="form-control" />
-                                        <label for="nationalityPlaceholder">User Nationality Placeholder</label>
+                                        <label for="nationalityPlaceholder">User Nationality Placeholder <span class="info" data-tooltip="The placeholder is a short hint that is displayed in the input field before the user enters a value." data-tooltip-location="right">&#9432;</span></label>
                                         <input type="text" id="nationalityPlaceholder" value="" placeholder="ex: Italian" class="form-control" />
                                     </div>
                                 </fieldset>
@@ -179,7 +180,7 @@
 
                                 <div class="form-group">
                                 <fieldset>
-                                    <label for="wanthandinessField">Do you need an Handiness field?</label>
+                                    <label for="wanthandinessField">Do you need an Handiness field? <span class="info" data-tooltip="This will add a radio-button for the user to select their handiness." data-tooltip-location="right">&#9432;</span></label>
                                     <div class="form-check">
                                         <input type="radio" id="wanthandinessField" name="wanthandinessField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'handinessLabel');" />
                                         <label class="form-check-label">Yes</label>
@@ -189,7 +190,7 @@
                                         <label class="form-check-label">No</label>
                                     </div>
                                     <div class="form-group" style="display: none;">
-                                        <label for="handinessLabel">User Handiness label</label>
+                                        <label for="handinessLabel">User Handiness label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
                                         <input type="text" id="handinessLabel" value="" placeholder="ex: Please select handiness" class="form-control" />
                                         <input type="text" id="leftLabel" value="Left" class="form-control" />
                                         <input type="text" id="rightLabel" value="Right" class="form-control" />
@@ -202,7 +203,7 @@
                 <p> Please select the settings for your Q-experiment </p>
                 <form>
                     <fieldset>
-                        <label for="grid"></label>
+                        <label for="grid"> Please select the number of the grid boxes you'd like for your experiment. This should be equal to the number of images you want to use.</label>
                         <select class="form-control" id="grid">
                             <option value="15">15</option>
                             <option selected="selected" value="16">16</option>
@@ -238,20 +239,20 @@
                             <option value="64">64</option>
                         </select>
                         <br />
-                        <label for="width">Select image width</label>
+                        <label for="width">Select image width <span class="info" data-tooltip="This will affect the size of the grid too." data-tooltip-location="right">&#9432;</span></label>
                         <input type="number" id="width" min="29" max="" value="88" class="form-control" />
                         <br />
-                        <label for="height">Select image height</label>
+                        <label for="height">Select image height <span class="info" data-tooltip="This will affect the size of the grid too." data-tooltip-location="right">&#9432;</span></label>
                         <input type="number" id="height" min="10" max="" value="31" class="form-control" />
                         <br />
-                        <label for="gridHeader">Header on top of the grid</label>
-                        <input type="text" id="gridHeader" value="Drag the image to the grid and place it where you want. Press ESC to finish" class="form-control" />
+                        <label for="gridHeader">Header on top of the grid <span class="info" data-tooltip="This appears on top of the grid." data-tooltip-location="right">&#9432;</span></label>
+                        <input type="text" id="gridHeader" value="Q-experiment" class="form-control" />
                         <br />
                         <label for="gridInstructions">Text on top of the grid</label>
-                        <input type="text" id="gridInstructions" value="Q-experiment" class="form-control" />
+                        <input type="text" id="gridInstructions" value="Drag the image to the grid and place it where you want. Press ESC to finish" class="form-control" />
                     </fieldset>
                 </form>
-                <p>Add the images from your images folder here</p>
+                <h3>Add the images from your images folder here</h3>
                 <form action="#" class="dropzone" id="my-awesome-dropzone" />
                 </form>
                 <input type="button" id="save" value="Generate code" onclick='constructContent();' class="btn btn-primary" />
@@ -259,12 +260,13 @@
                 <br /><br />
                 <form><textarea id="cognition" class="form-control js-copytextarea" rows="30"></textarea></form>
             </div>
+        </div>
+
             <div class="row">
                 <div class="col-auto">
-                    <a href="https://www.congnition.run/">Go to congnition.run website</a>
+                    <a class ="btn btn-primary" href="https://www.congnition.run/">Go to congnition.run website</a>
                 </div>
             </div>
-        </div>
         <div class="col-auto fixed-bottom">
         </div>
     </div>
