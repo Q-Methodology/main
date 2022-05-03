@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q-Methodology experiment</title>
+        <script src="lib/jquery-3.6.0.min.js"></script>
+        <script src="lib/jspsych.js"></script>
+        <script src="plugins/jspsych-html-keyboard-response.js"></script>
+        <script src="plugins/jspsych-survey-html-form.js"></script>
+        <script src="plugins/jspsych-preload.js"></script>
+        <script src="plugins/jspsych-draggable.js"></script>
+        <script src="plugins/jspsych-grid.js"></script>
+        <link href="css/jspsych.css" rel="stylesheet" type="text/css">
+        <link href="css/jspsych-grid.css" rel="stylesheet" type="text/css">
+    </head>
+    <body></body>
+    <script>
