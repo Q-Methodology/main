@@ -25,13 +25,13 @@ B) If you know how to set-up a webserver or have someone who can help you to do 
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Also, you can find written [instructions](./cognition/cognition) and a [video](https://www.youtube.com/watch?v=O628dNA7WCc) on how to use cognition.run to perform your experiments. 
- <strike>  
+ </strike>  
 -or-  
 
 C) If you have no access to a webserver or anyone to help you setup one, you can use Jatos to host your experiment. For this purpose, we have build a different tool that will create the necessary
 <strike>   
 B) set up your own instance, and write your own experiment using the [plugin](./homebrew/homebrew) as one of the trials. 
-<strike>   
+</strike>   
 The same constructor, can also be used in your own instance _(with a bit of HTML coding to wrap around the javascript code)_. 
 
 ## What is the added value
