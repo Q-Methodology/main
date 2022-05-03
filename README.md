@@ -15,9 +15,9 @@ This is a tool that works in collaboration with the jsPsych library and can help
 
 There are two ways you can use the plugin.
 
-A) If you have the technical skills to write JavaScript code and set-up your own webserver, you will find the plugin details and files to download [here](./homebrew/homebrew.md). You can build your experiment using the JsPsych library.
+A) If you have the technical skills to write JavaScript code and set-up your own webserver, you will find the plugin details and files to download [here](./homebrew/homebrew). You can build your experiment using the JsPsych library.
 
-B) If you know how to set-up a webserver or have someone who can help you to do so (like your IT department), but you lack the skills in JavaScript you can use our [simple constructor](./jszip/constructor.html) that will help you create your project using a web form. You can retrieve all the necessary files for the project in a zip file.  
+B) If you know how to set-up a webserver or have someone who can help you to do so (like your IT department), but you lack the skills in JavaScript you can use our [simple constructor](./jszip/constructor) that will help you create your project using a web form. You can retrieve all the necessary files for the project in a zip file.  
 
 -or-  
 
