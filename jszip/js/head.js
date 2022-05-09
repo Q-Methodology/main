@@ -5,9 +5,9 @@ try {
 		
 function getZipFile(){
 	
-	//JSZipUtils.getBinaryContent('basis.zip', function(err, data) {
-	//JSZipUtils.getBinaryContent('https://kernel52.github.io/Q-methodology/jszip/zipfile.zip', function(err, data) {
-	JSZipUtils.getBinaryContent('http://localhost/jszip/zipfile.zip', function(err, data) {
+	// JSZipUtils.getBinaryContent('http://localhost/jszip/zipfile.zip', function(err, data) {
+	// JSZipUtils.getBinaryContent('https://q-methodology.github.io/main/jszip/zipfile.zip', function(err, data) {
+	JSZipUtils.getBinaryContent('../zipfile.zip', function(err, data) {
 		if(err) {
 			throw err; // or handle err
 		}//end if
