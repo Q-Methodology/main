@@ -316,7 +316,8 @@ async function createExperimentFile(){
 
 async function getFile(){
 	var fileData
-	return await fetch('http://localhost/jszip/start.txt')
+	//return await fetch('http://localhost/jszip/start.txt')
+	return await fetch('start.txt')
 		  .then(response => response.text())
 .then(data => {return data})
 		//  .then(fileData => {return fileData})
