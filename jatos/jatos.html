@@ -1,0 +1,520 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </meta>
+    <link rel="stylesheet" type="text/css" href="dropzone.min.css">
+    </link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </link>
+    <script src="dropzone.min.js"></script>
+    <script>
+        // "myAwesomeDropzone" is the camelized version of the HTML element's ID
+        Dropzone.options.myAwesomeDropzone = {
+        //maxFilesize: 2, // MB
+        autoProcessQueue: false,
+        //autoQueue: false,
+        addRemoveLinks: true,
+        };
+    </script>
+    <link rel="stylesheet" type="text/css" href="tooltip.css">
+    <style type="text/css">
+    fieldset {
+        border: #f8f9fa 0.2rem solid;
+        padding: 0.6rem;
+    }
+  .info {
+    color:red;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <h1>Construct your experiment</h1>
+                <p>This is part of the Q-methodology tools </p>
+                <p>This form can help you construct your experiment without the need to write code yourself.</p>
+                <p class="font-italic">You can leave blank what you don't want to use</p>
+                <p><a class="btn btn-primary" href="/Q-methodology/">Return to the home page</a></p>
+                <form>
+                    <fieldset>
+                        <label for="wantwelcome">Do you want a welcome message? <span class="info" data-tooltip="This will be the welcome message of your experiment" data-tooltip-location="right">&#9432;</span></label>
+                        <div class="form-check">
+                            <input type="radio" id="wantwelcome" name="wantwelcome" value="Yes" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="wantwelcome" name="wantwelcome" checked="checked" value="No" class="form-check-input" onclick="yesnoCheck(this.id,'welcome');" />
+                            <label class="form-check-label">No</label>
+                        </div>
+                        <div class="form-group" style="display:none;">
+                            <!-- <label>Include a welcome message</label> -->
+                            <input class="form-control" type="text" id="welcome" value="" placeholder="Your welcome message for the user" />
+                        </div>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <label>Do you want to include instructions? <span class="info" data-tooltip="This will be a page with instructions for the user" data-tooltip-location="right">&#9432;</span></label>
+                        <div class="form-check">
+                            <input type="radio" id="wantinstructions" name="wantinstructions" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'instructions');" />
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="wantinstructions" name="wantinstructions" checked="checked" class="form-check-input" value="No" onclick="yesnoCheck(this.id,'instructions');" />
+                            <label class="form-check-label">No</label>
+                        </div>
+                        <div class="form-group" style="display:none;">
+                            <!-- <label>Include instructions</label> -->
+                            <textarea placeholder="Write here your instructions" class="form-control" id="instructions"></textarea>
+                        </div>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <label>Would you like a questionnaire? <span class="info" data-tooltip="Should you need to ask questions for your user" data-tooltip-location="right">&#9432;</span></label>
+                        <div class="form-check">
+                            <input type="radio" id="wantquestionnaire" name="wantquestionnaire" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="wantquestionnaire" name="wantquestionnaire" checked="checked" class="form-check-input" value="No" onclick="yesnoCheck(this.id,'preamble');yesnoCheck(this.id,'trigger');" />
+                            <label class="form-check-label">No</label>
+                        </div>
+                        <div style="display:none;">
+                            <span id="trigger">
+                                <!--show hide all questions at once--></span>
+                            <div class="form-group" style="display:none;">
+                                <label for="preamble"> Preamble <span class="info" data-tooltip="Text appearing before the questionnaire" data-tooltip-location="right">&#9432;</span> </label>
+                                <input type="text" id="preamble" placeholder="ex: Please fill in the questionnaire" class="form-control" />
+                            </div>
+     
+                            <label>Questionnaire elements</label>
+                            
+                                <div class="form-group">
+                                    <fieldset>
+                                    <label for="idField">Do you need an ID field? <span class="info" data-tooltip="In case you want to track participants (for example, if you use prolific)" data-tooltip-location="right">&#9432;</span></label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantidField" name="wantidField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'idPlaceholder');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantidField" name="wantidField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'idPlaceholder');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="idLabel">User ID label <span class="info" data-tooltip="The text to appear next to the field for the ID" data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="idLabel" placeholder="ex: Please write your ID" value="" class="form-control" />
+                                        <label for="idPlaceholder">User ID Placeholder <span class="info" data-tooltip="The placeholder is a short hint that is displayed in the input field before the user enters a value." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="idPlaceholder" placeholder="ex: 54852245" value="" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>                                    
+                                    <label for="wantgenderField">Do you want to collect gender information? <span class="info" data-tooltip="This will add a radio-button to select their gender" data-tooltip-location="right">&#9432;</span></label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantgenderField" name="wantgenderField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'genderLabel');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantgenderField" name="wantgenderField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'genderLabel');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="genderLabel">User Gender label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="genderLabel" placeholder="ex: Please select your gender" value="" class="form-control" />
+                                        <label for="maleLabel">Male label</label>
+                                        <input type="text" id="maleLabel" value="Male" class="form-control" />
+                                        <label for="femaleLabel">Female label</label>
+                                        <input type="text" id="femaleLabel" value="Female" class="form-control" />
+                                        <label for="otherLabel">Other label</label>
+                                        <input type="text" id="otherLabel" value="Other" class="form-control" />
+                                    </div>
+                                </fieldset>    
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>    
+                                    <label for="wantageField">Do you need an Age field? <span class="info" data-tooltip="This will add a numerical field to select the user's age" data-tooltip-location="right">&#9432;</span></label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantageField" name="wantageField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'agePlaceholder');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantageField" name="wantageField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'agePlaceholder');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="ageLabel">User Age label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="ageLabel" value="" class="form-control" />
+                                        <label for="agePlaceholder">User Age Placeholder <span class="info" data-tooltip="The placeholder is a short hint that is displayed in the input field before the user enters a value." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="number" id="agePlaceholder" value="" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>    
+                                    <label for="wantnationalityField">Do you need an Nationality field? <span class="info" data-tooltip="This will add a field for the user to write their nationality." data-tooltip-location="right">&#9432;</span></label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantnationalityField" name="wantnationalityField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'nationalityLabel');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wantnationalityField" name="wantnationalityField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'nationalityLabel');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="nationalityLabel">User Nationality label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="nationalityLabel" value="" class="form-control" />
+                                        <label for="nationalityPlaceholder">User Nationality Placeholder <span class="info" data-tooltip="The placeholder is a short hint that is displayed in the input field before the user enters a value." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="nationalityPlaceholder" value="" placeholder="ex: Italian" class="form-control" />
+                                    </div>
+                                </fieldset>
+                                </div>
+
+                                <div class="form-group">
+                                <fieldset>
+                                    <label for="wanthandinessField">Do you need an Handiness field? <span class="info" data-tooltip="This will add a radio-button for the user to select their handiness." data-tooltip-location="right">&#9432;</span></label>
+                                    <div class="form-check">
+                                        <input type="radio" id="wanthandinessField" name="wanthandinessField" class="form-check-input" value="Yes" onclick="yesnoCheck(this.id,'handinessLabel');" />
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="wanthandinessField" name="wanthandinessField" class="form-check-input" checked="checked" value="No" onclick="yesnoCheck(this.id,'handinessLabel');" />
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                    <div class="form-group" style="display: none;">
+                                        <label for="handinessLabel">User Handiness label <span class="info" data-tooltip="This will be the text to appear next to the field." data-tooltip-location="right">&#9432;</span></label>
+                                        <input type="text" id="handinessLabel" value="" placeholder="ex: Please select handiness" class="form-control" />
+                                        <input type="text" id="leftLabel" value="Left" class="form-control" />
+                                        <input type="text" id="rightLabel" value="Right" class="form-control" />
+                                    </div>
+                                </fieldset>    
+                                </div>
+                        </div>
+                </fieldset>
+                </form>
+                <p> Please select the settings for your Q-experiment </p>
+                <form>
+                    <fieldset>
+                        <label for="grid"> Please select the number of the grid boxes you'd like for your experiment. This should be equal to the number of images you want to use.</label>
+                        <select class="form-control" id="grid">
+                            <option value="15">15</option>
+                            <option selected="selected" value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                            <option value="48">48</option>
+                            <option value="50">50</option>
+                            <option value="52">52</option>
+                            <option value="54">54</option>
+                            <option value="55">55</option>
+                            <option value="56">56</option>
+                            <option value="58">58</option>
+                            <option value="60">60</option>
+                            <option value="62">62</option>
+                            <option value="64">64</option>
+                        </select>
+                        <br />
+                        <label for="width">Select image width <span class="info" data-tooltip="This will affect the size of the grid too." data-tooltip-location="right">&#9432;</span></label>
+                        <input type="number" id="width" min="29" max="" value="88" class="form-control" />
+                        <br />
+                        <label for="height">Select image height <span class="info" data-tooltip="This will affect the size of the grid too." data-tooltip-location="right">&#9432;</span></label>
+                        <input type="number" id="height" min="10" max="" value="31" class="form-control" />
+                        <br />
+                        <label for="gridHeader">Header on top of the grid <span class="info" data-tooltip="This appears on top of the grid." data-tooltip-location="right">&#9432;</span></label>
+                        <input type="text" id="gridHeader" value="Q-experiment" class="form-control" />
+                        <br />
+                        <label for="gridInstructions">Text on top of the grid</label>
+                        <input type="text" id="gridInstructions" value="Drag the image to the grid and place it where you want. Press ESC to finish" class="form-control" />
+                    </fieldset>
+                </form>
+                <h3>Add the images from your images folder here</h3>
+                <form action="#" class="dropzone" id="my-awesome-dropzone" />
+                </form>
+                <input type="button" id="save" value="Generate code" onclick='constructContent();' class="btn btn-primary" />
+                <input type="button" id="copy" value="Copy code to clipboard" class="js-textareacopybtn btn btn-primary" />
+                <br /><br />
+                <form><textarea id="cognition" class="form-control js-copytextarea" rows="30"></textarea></form>
+            </div>
+        </div>
+
+            <div class="row">
+                <div class="col-auto">
+                    <a class ="btn btn-primary" href="https://www.congnition.run/">Go to congnition.run website</a>
+                </div>
+            </div>
+        <div class="col-auto fixed-bottom">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+//define $ as your function
+window.$ = document.getElementById.bind(document)
+
+
+function yesnoCheck(el, id) {
+    if ($(el).checked) {
+        //console.log ('checked')
+        $(id).parentNode.style.display = 'block';
+    } else {
+        //console.log ('un-checked')
+        $(id).parentNode.style.display = 'none';
+    } //end if
+}
+
+
+/*
+ * Create the content of the file to save. 
+ * trick is to pass the text in decoding and then encoding. in the absence of a better solution.
+ */
+function constructContent() {
+
+   var suppresor = `
+   on_finish: function(data) {
+     raw_data = jsPsych.data.get().values();  
+     raw_data.pop();
+   },
+   `;
+
+    //clear the outcome
+    $('cognition').innerHTML = `    
+    /* Create timeline var */
+    var timeline = [];
+    var questions; //used to store the questionnaire
+    `;
+
+    // collect images
+    var imageArray = "[";
+    var list = document.getElementsByTagName('img')
+    for (i = 0; i < list.length; i++) {
+        imageArray += "'" + list[i].getAttribute('alt') + "',"
+    }
+    imageArray += "]";
+    /* create preload */
+    $('cognition').innerHTML += `
+    /*
+    * preload all images (if needed)
+    * Add all filenames, making sure you have as many as declared in the grid-size below.
+    */
+    var preload = {
+    type: 'preload',
+    images: ${imageArray},
+    /*auto_preload: true,*/
+    ${suppresor}
+    }
+    timeline.push(preload);
+    `;
+
+    if ($('wantwelcome').checked) {
+        /* create welcome */
+        var welcome = $("welcome").value;
+        $('cognition').innerHTML += `
+    /*
+    * define welcome message trial
+    * Add a welcome message for the users
+    */
+    var welcome = {
+    type: "html-keyboard-response",
+    stimulus: "${welcome}",
+    ${suppresor}
+    };
+    timeline.push(welcome);
+    `;
+    }
+
+
+    if ($('wantinstructions').checked) {
+        /* create welcome */
+        var instructions = $("instructions").value;
+        $('cognition').innerHTML += `
+    /*
+    * define instructions
+    * Add instructions for the user to explain the experiment
+    */
+    var instructions = {
+    type: "html-keyboard-response",
+    stimulus: "${instructions}",
+    ${suppresor}
+    };
+    timeline.push(instructions);
+    `;
+    }
+
+
+    if ($('wantquestionnaire').checked) {
+
+        $('cognition').innerHTML += ` `;
+        $('cognition').innerHTML += ` 
+    
+      /*
+      * Gender, age, nationality, handiness
+      * A list of questions for the user's statistics.
+      */
+      var questionnaire = {
+      type: "survey-html-form",
+      html: \`
+      `;
+
+        if ($('wantidField').checked) {
+            var idLabel = $('idLabel').value;
+            var idPlaceholder = $('idPlaceholder').value;
+            $('cognition').innerHTML += `<label for='id'>${idLabel}</label>  <input type='text' name='id' id='id' value='' placeholder='${idPlaceholder}' /> <br /> `;
+        }
+
+        /* should add extra labels for each choice */
+        if ($('wantgenderField').checked) {
+            var genderLabel = $('genderLabel').value;
+            var maleLabel = $('maleLabel').value;
+            var femaleLabel = $('femaleLabel').value;
+            var otherLabel = $('otherLabel').value;
+            $('cognition').innerHTML += `
+            <label for='gender'>Gender:</label>
+            <input type='radio' name='gender' id='Male' value='${maleLabel}' /> ${maleLabel}
+            <input type='radio' name='gender' id='Female' value='${femaleLabel}' /> ${maleLabel}
+            <input type='radio' name='gender' id='Other' value='${otherLabel}' /> ${otherLabel} <br />
+          `;
+        }
+
+        if ($('wantageField').checked) {
+
+            var ageLabel = $('ageLabel').value;
+            var agePlaceholder = $('agePlaceholder').value;
+            $('cognition').innerHTML += ` 
+              <label for='age'>${ageLabel}:</label>
+              <input type='number' name='age' id='age' value='' placeholder='${agePlaceholder}' /><br />
+          `;
+        }
+
+        if ($('wantnationalityField').checked) {
+            var nationalityLabel = $('nationalityLabel').value;
+            var nationalityPlaceholder = $('nationalityPlaceholder').value;
+            $('cognition').innerHTML += ` 
+            <label for='nationality'>${nationalityLabel}</label>
+            <input type='text' name='nationality' id='nationality' value='${nationalityPlaceholder}' /><br />
+          `
+        }
+
+        /* should add extra labels for each choice */
+        if ($('wanthandinessField').checked) {
+            var handinessLabel = $('handinessLabel').value;
+            var leftLabel = $('leftLabel').value;
+            var rightLabel = $('rightLabel').value;
+            $('cognition').innerHTML += ` 
+          <label for='handiness'>${handinessLabel}</label>
+          <input type='radio' name='handiness' id='left' value='${leftLabel}' /> ${leftLabel}
+          <input type='radio' name='handiness' id='right' value='${rightLabel}' /> ${rightLabel} <br />  
+        `;
+
+         $('cognition').innerHTML += `,      
+         on_finish:function(data){
+            raw_data = jsPsych.data.get();
+            questions = raw_data.pop().response; //get the response object
+         }, `; 
+        }
+
+        var preamble = $('preamble').value;
+        /* close the HTML of the object */
+        $('cognition').innerHTML += ` \`, 
+      preamble: "<h3>${preamble}</h3>",
+      dataAsArray: false,
+      autofocus : 'id',
+      autocomplete: false,
+      ${suppresor}
+      };
+
+      timeline.push(questionnaire);
+`
+    }
+
+    /* Create the grid */
+    var grid = $("grid").value
+    var width = $("width").value
+    var height = $("height").value
+    var gridInstructions = $("gridInstructions").value
+    var gridHeader = $("gridHeader").value
+  
+  $('cognition').innerHTML += `
+  /*
+  * define the grid
+  * Define the files, the size, and the dimensions of each photo below the grid. 
+  */
+  var grid = {
+    type: "grid",
+    images: ${imageArray},
+    size: ${grid},
+    width: ${width},
+    height: ${height},
+    instructions: "${gridInstructions}",
+    header: "${gridHeader}",
+    on_finish: function(data){
+    `;
+    //Include the function for data manipulation.
+    $('cognition').innerHTML += `  
+    if(questions !=''){
+        //parse questions into variables 
+         Object.entries(questions).forEach(([key, value]) => { data[key]=value });
+    }//end if
+    `;
+  
+  //close the grid.
+  $('cognition').innerHTML += `  }
+  };
+  timeline.push(grid);
+  `
+
+    /* Final touch */
+    $('cognition').innerHTML +=
+        `
+    /* start the experiment */
+    jsPsych.init({
+      timeline: timeline,
+    });
+    `;
+}
+
+/* 
+ * copy code to clipboard
+ * https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+ */
+var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+copyTextareaBtn.addEventListener('click', function(event) {
+    var copyTextarea = document.querySelector('.js-copytextarea');
+    copyTextarea.focus();
+    copyTextarea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to copy');
+    }
+});
+</script>
+
+</html>
