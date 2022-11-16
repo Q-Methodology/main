@@ -1,7 +1,6 @@
 If you know how to write code, you can consult the following pages to construct your own experiment. 
-Provide links with the necessary information. 
-https://softdev.ppls.ed.ac.uk/online_experiments/data.html
-https://softdev.ppls.ed.ac.uk/online_experiments/jspsych.html
+   
+https://softdev.ppls.ed.ac.uk/online_experiments/
 
 
 In order to create your own Q-methodology grid, you will need to include the following options
@@ -45,4 +44,4 @@ Depending on the size of your grid, you might want to limit these for the grid t
   
 
 ---
-[Back to the homepage](/Q-methodology/)
+[Back to the homepage](/main/)
